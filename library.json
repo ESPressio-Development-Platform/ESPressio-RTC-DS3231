@@ -9,7 +9,7 @@
   "platforms": "*",
   "build": {"flags": ["-std=gnu++17"], "unflags": ["-std=gnu++11"]},
   "dependencies": [
-    {"name": "ESPressio-RTC", "version": "https://github.com/ESPressio-Development-Platform/ESPressio-RTC.git#rtc_implementation"},
-    {"name": "ESPressio-Platform", "version": "https://github.com/ESPressio-Development-Platform/ESPressio-Platform.git#platform_clock"}
+    {"name": "ESPressio-RTC", "version": "https://github.com/ESPressio-Development-Platform/ESPressio-RTC.git#main"},
+    {"name": "ESPressio-Platform", "version": "https://github.com/ESPressio-Development-Platform/ESPressio-Platform.git#main"}
   ]
 }
