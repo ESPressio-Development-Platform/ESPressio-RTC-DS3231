@@ -1,0 +1,18 @@
+name: Native RTC device tests
+on: [push, pull_request]
+jobs:
+  native:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: ESPressio-Development-Platform/ESPressio-RTC
+          ref: rtc_implementation
+          path: ESPressio-RTC
+      - uses: actions/checkout@v4
+        with:
+          repository: ESPressio-Development-Platform/ESPressio-Platform
+          ref: platform_clock
+          path: ESPressio-Platform
+      - run: RTC_SRC="$GITHUB_WORKSPACE/ESPressio-RTC/src" PLATFORM_SRC="$GITHUB_WORKSPACE/ESPressio-Platform/src" ./tests/run_native_tests.sh
